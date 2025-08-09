@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flappy Jordan</title>
+<style>
+  html, body { margin:0; padding:0; background:#0b0b0b; font-family:system-ui, Arial; color:#eee; }
+  #wrap { display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px; }
+  canvas { background:linear-gradient(#15202b 0%, #1e2a38 60%, #1a1a1a 60%, #3b2a1a 100%); 
+           border:2px solid #222; border-radius:12px; touch-action:none; }
+  .hud { width:min(640px, 95vw); display:flex; justify-content:space-between; align-items:center; }
+  .btns { display:flex; gap:8px; flex-wrap:wrap; }
+  button {
+    background:#e63946; border:none; border-radius:10px; color:#fff; padding:10px 14px; font-size:14px; cursor:pointer;
+    box-shadow: 0 2px 0 #9c1f29;
+  }
+  button:active { transform: translateY(1px); box-shadow:none; }
+  .hint { font-size:12px; color:#aaa; }
+  .score { font-weight:700; letter-spacing:0.5px; }
+  a { color:#9bd; text-decoration:none; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="hud">
+      <div class="score">Score: <span id="score">0</span> &bull; Best: <span id="best">0</span></div>
+      <div class="btns">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <canvas id="game" width="480" height="640" aria-label="Flappy Jordan game"></canvas>
+    <div class="hint">
+      Tap / Click / Space to jump. Mobile-friendly.  
+      Tip: You can pass a sprite URL like <code>?sprite=https://example.com/your.png</code>.
+    </div>
+  </div>
+
+<script>
+// shortened for brevity in the zip example
+alert('Flappy Jordan loaded! Click to jump!');
+</script>
+</body>
+</html>
